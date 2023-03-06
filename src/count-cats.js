@@ -14,17 +14,16 @@ const { NotImplementedError } = require('../extensions/index.js');
  * ]) => 3`
  *
  */
-function countCats(a) {
-  // throw new NotImplementedError('Not implemented');
+function countCats(martix) {
     let count = 0;
-    a.forEach(x => {
-      x.forEach(a => {
-        if (a === "^^") {
-          count++
+    martix.forEach(arr => {
+      arr.forEach(subArr => {
+        if (subArr === "^^") {
+          count++;
         }
       })
     })
-    return count
+    return count;
 }
 
 module.exports = {
