@@ -16,6 +16,16 @@ class DepthCalculator {
   calculateDepth(/* arr */) {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+      let count = 0;
+      if (Array.isArray(arr)) {
+        count++;
+        arr.forEach(x => {
+          if (Array.isArray(x)) {
+            count += depthCalc.calculateDepth(x);
+          }
+        })
+      }
+      return count;
   }
 }
 
