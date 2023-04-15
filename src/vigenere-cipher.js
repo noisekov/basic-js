@@ -30,8 +30,6 @@ class VigenereCipheringMachine {
     } else {
       return mes.toUpperCase();
     }
-    // throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
   }
   decrypt(mes, key) {
     // throw new NotImplementedError('Not implemented');
@@ -40,8 +38,6 @@ class VigenereCipheringMachine {
     } else {
       return mes.toUpperCase();
     }
-    // throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
   }
 }
 

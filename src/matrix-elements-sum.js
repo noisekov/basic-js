@@ -26,12 +26,12 @@ function getMatrixElementsSum(matrix) {
         if (matrix[i][j] === 0) {
           break;
         } else {
-         sum += matrix[i][j];
+          sum += matrix[i][j];
         }
       }
       result.push(sum);
     }
-   return result.reduce((acc,val) => acc+val,0);
+  return result.reduce((acc,val) => acc+val,0);
 }
 
 module.exports = {
