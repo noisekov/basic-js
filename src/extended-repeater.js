@@ -26,10 +26,12 @@ function repeater(str, options) {
       whatAddToStr += `${options.additionSeparator}`;
     }
     if (options.additionRepeatTimes > 1) {
-      newStr += whatAddToStr.repeat(options.additionRepeatTimes)
-      newStr = newStr.substring(newStr.length-options.additionSeparator.length, options.additionSeparator)
+      newStr += whatAddToStr.repeat(options.additionRepeatTimes);
+      if (options.additionSeparator) {
+        newStr = newStr.substring(newStr.length-options.additionSeparator.length, options.additionSeparator)
+      }
     } else {
-      newStr += whatAddToStr
+      newStr += whatAddToStr;
     }
   }
   if (!options.separator) {
