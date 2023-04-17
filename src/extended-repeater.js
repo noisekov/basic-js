@@ -18,8 +18,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 function repeater(str, options) {
   // throw new NotImplementedError('Not implemented');
   let newStr = `${str}`;
-
-  if (options.addition) {
+  if (options.addition || options.addition === false || options.addition === null) {
     let whatAddToStr = '';
     whatAddToStr += `${options.addition}`;
     if (options.additionSeparator && options.repeatTimes > 1) {
@@ -28,7 +27,7 @@ function repeater(str, options) {
     if (options.additionRepeatTimes > 1) {
       newStr += whatAddToStr.repeat(options.additionRepeatTimes);
       if (options.additionSeparator) {
-        newStr = newStr.substring(newStr.length-options.additionSeparator.length, options.additionSeparator)
+        newStr = newStr.substring(newStr.length-options.additionSeparator.length, options.additionSeparator);
       }
     } else {
       newStr += whatAddToStr;
